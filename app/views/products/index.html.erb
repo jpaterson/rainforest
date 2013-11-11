@@ -2,7 +2,10 @@
 
 <%= link_to "New Product", "/products/new" %>
 
-<%= @products.each do |picture| %>
-  <p><%= product[:name] %>, <%= product[:description] %>, <%= product[:price] %></p>
-  <%= link_to image_tag(product.url), "/products/#{picture.id}" %>
+<% @products.each do |product| %>
+<p>	<%= product[:name] %><br> 
+  	<%= product[:description] %><br>
+  	<%= product[:price_in_cents] %>
+</p>
+
 <% end %>
